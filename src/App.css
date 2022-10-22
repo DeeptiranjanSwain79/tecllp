@@ -1,0 +1,184 @@
+body {
+  background: linear-gradient(-135deg, rgba(0, 0, 0, 0.658), transparent)
+}
+
+/* For Scroll bar */
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1cc;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  /* border: 3px solid white;  creates padding around scroll thumb */
+}
+
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container>div {
+  width: 95%;
+  text-align: center;
+}
+
+.container>div:nth-child(2n) {
+  background-color: #9df2f7;  
+}
+
+.container>div:nth-child(2n):hover {
+  box-shadow: 0.4vmax 0 0.3vmax 0 #4ea5a9;
+}
+
+.container>div:nth-child(2n+1) {
+  background: linear-gradient(-135deg, rgb(171, 171, 243), rgb(193, 177, 250));  
+}
+
+.container>div:nth-child(2n+1):hover {
+  box-shadow: 0.4vmax 0 0.3vmax 0 #894ea9;
+}
+
+.container>div:nth-child(3n)>h6>span {
+  background-color: rgb(146, 243, 98);
+  color: green;
+  opacity: 0.7;
+  border-radius: 1vmax;
+  padding: 0 0.5vmax;
+}
+
+.container>div:nth-child(2n)>h6>span {
+  background-color: rgb(247, 124, 130);
+  color: rgb(82, 3, 3);
+  opacity: 0.7;
+  border-radius: 1vmax;
+  padding: 0 0.5vmax;
+}
+
+.container>div:nth-child(3n + 1)>h6>span {
+  background-color: rgb(23, 23, 23);
+  color: rgb(250, 250, 250);
+  opacity: 0.7;
+  border-radius: 1vmax;
+  padding: 0 0.5vmax;
+}
+
+.container>div {
+  background: linear-gradient(375deg, #9df2f7, #a2f0d1);
+  border-radius: 15px;
+  margin: 1vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding-left: 1vmax;
+}
+
+.container>div:hover {
+  transform: scale(1.01);
+}
+
+.container>div>h5 {
+  text-align: start;
+  font: 800 1.5vmax "Poppins";
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.container>div>h6 {
+  font: 800 0.9vmax "Tiro Tamil";
+  text-align: start;
+}
+
+#region {
+  font: 500 0.9vmax "Cormorant Garamond";
+  text-align: start;
+  margin-top: -2vmax;
+}
+
+.year-source {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -1.5vmax;
+}
+
+#source {
+  font: 800 0.9vmax "Tiro Tamil";
+  text-align: start;
+}
+
+#year {
+  font: 900 0.9vmax "Poppins";
+  text-align: end;
+}
+
+.sector-topic-link {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+#sector {
+  font: 800 0.9vmax "TIro Tamil";
+}
+
+#topic {
+  font: 800 0.9vmax "Cormorant Garamond";
+}
+
+.btn {
+  background-color: green;
+  width: fit-content;
+  padding: 0.5vmax 1vmax;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.7vmax;
+  text-align: center;
+}
+
+@media screen and (min-width: 651px) and (max-width: 1007px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 650px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .container > div {
+    padding: 0.5vmax;
+  }
+  .sector-topic-link {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .container > div > h5 {
+    font-size: 2.5vmax;
+  }
+
+  .container > div > h6 {
+    font-size: 2vmax;
+  }
+
+  #region {
+    font-size: 1.8vmax;
+  }
+
+  #year, #source, #sector, #topic, .btn {
+    font-size: 2vmax;
+  }
+
+  #sector, #topic {
+    margin-top: -1.2vmax;
+  }
+}
